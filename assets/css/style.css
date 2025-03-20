@@ -1,0 +1,833 @@
+/* 全局樣式 */
+:root {
+    --primary-color: #FF6600;
+    --secondary-color: #00BCD4;
+    --accent-color: #4CAF50;
+    --dark-color: #333333;
+    --light-color: #FFFFFF;
+    --gray-color: #F5F5F5;
+    --text-color: #333333;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--dark-color);
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 50px;
+}
+
+/* 按鈕樣式 */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.cta-button:hover {
+    background-color: #e55c00;
+    color: var(--light-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* 導航欄 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: var(--transition);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    margin: 5px 0;
+    transition: var(--transition);
+}
+
+/* 首屏主視覺 (Hero Section) */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* 痛點與產品價值 (Pain Points Section) */
+.pain-points-section {
+    background-color: var(--gray-color);
+}
+
+.pain-points-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.pain-point-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.pain-point-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pain-point-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pain-point-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.solution-teaser {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.solution-teaser h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.scroll-down {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 產品核心特色 (Features Section) */
+.features-section {
+    background-color: var(--light-color);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.feature-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-image {
+    flex: 1;
+    padding: 0 30px;
+}
+
+.feature-image img {
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.feature-content {
+    flex: 1;
+    padding: 0 30px;
+}
+
+.feature-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    margin-top: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.feature-list li:before {
+    content: "✓";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+/* 使用情境 / 情感共鳴 (User Scenarios Section) */
+.scenarios-section {
+    background: linear-gradient(to right, #f6f9fc, #edf1f7);
+}
+
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.scenario-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.scenario-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.scenario-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.scenario-card h3 {
+    padding: 20px 20px 10px;
+    color: var(--primary-color);
+}
+
+.scenario-card p {
+    padding: 0 20px 20px;
+}
+
+/* 競品比較 (Comparison Section) */
+.comparison-section {
+    background-color: var(--light-color);
+}
+
+.comparison-table-wrapper {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-weight: 500;
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.comparison-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* 用戶評價 & 社會證明 (Social Proof Section) */
+.reviews-section {
+    background-color: var(--gray-color);
+}
+
+.reviews-slider {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.reviews-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.review-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 30px;
+    min-width: 350px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.rating {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.reviewer-info h4 {
+    margin-bottom: 5px;
+}
+
+.reviewer-info p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+.media-reviews h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.media-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.media-review-card {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.media-review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.media-review-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.media-review-card h4 {
+    padding: 20px 20px 10px;
+}
+
+.media-review-card p {
+    padding: 0 20px;
+    font-style: italic;
+}
+
+.read-more {
+    display: inline-block;
+    margin: 10px 20px 20px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* FAQ（常見問題） */
+.faq-section {
+    background-color: var(--light-color);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: var(--light-color);
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+.faq-toggle {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 500px;
+}
+
+.faq-item.active .faq-toggle .fa-plus {
+    transform: rotate(45deg);
+}
+
+/* 行動召喚 (CTA) 與優惠資訊 (Final CTA Section) */
+.cta-section {
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+    color: var(--light-color);
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--light-color);
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.cta-offers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.offer-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+}
+
+.offer-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.offer-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.offer-card h3 {
+    color: var(--light-color);
+    margin-bottom: 10px;
+}
+
+.cta-action {
+    margin-top: 40px;
+}
+
+.secure-payment {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 頁尾 */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: var(--light-color);
+    margin-bottom: 20px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+}
+
+.footer-links ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+    .pain-points-grid,
+    .scenarios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .feature-item,
+    .feature-item.reverse {
+        flex-direction: column;
+    }
+    
+    .feature-image,
+    .feature-content {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--light-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .media-reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-offers {
+        flex-direction: column;
+    }
+    
+    .footer-content > div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .pain-points-grid,
+    .scenarios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-card {
+        min-width: 100%;
+    }
+} 
