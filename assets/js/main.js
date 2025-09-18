@@ -5,13 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            navbar.style.padding = '10px 0';
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            navbar.style.padding = '14px 0';
+            navbar.style.backgroundColor = 'rgba(15, 23, 42, 0.92)';
+            navbar.style.boxShadow = '0 18px 35px rgba(15, 23, 42, 0.25)';
+            navbar.style.backdropFilter = 'blur(18px)';
+            navbar.style.borderBottom = '1px solid rgba(148, 163, 184, 0.35)';
         } else {
-            navbar.style.padding = '15px 0';
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            navbar.style.padding = '20px 0';
+            navbar.style.backgroundColor = 'rgba(15, 23, 42, 0.72)';
+            navbar.style.boxShadow = '0 12px 30px rgba(15, 23, 42, 0.2)';
+            navbar.style.backdropFilter = 'blur(16px)';
+            navbar.style.borderBottom = '1px solid rgba(148, 163, 184, 0.25)';
         }
     });
     
